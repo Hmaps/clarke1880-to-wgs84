@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projection</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css"/> 
+    
+    <script src="https://js.arcgis.com/4.15/"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    
+    
+</head>
+<body>         
+    <form action="form">
+        <select name="select transform" id="selector">
+            <option value="stereo to wgs">stereographic to wgs84/DD</option>
+            <option value="wgs to stereo">wgs84/DD to stereographic</option>
+            <option value="stereo to utm"> stereographic to utm</option>
+            <option value="utm to stereo">utm to stereographic</option>
+            <option value="utm to wgs">utm to wgs84/DD</option>
+            <option value="wgs to utm"> wgs84/DD to utm</option>
+        </select><br>
+        <input type="text" value="-360000.2" class="x-input"><label for="">Easting</label><br>
+        <input type="text" value="-920000.2" class="y-input"><label for="">Northing</label><br>
+        <button class="btn">Convert</button><br> 
+       <div class="output-box" style="background-color: white;margin-top: 10px;padding:9px ;">
+            <div class="output-x" aria-placeholder="easting"></div> <label for="">Easting</label><br>
+            <div class="output-y" aria-placeholder="northing"></div> <label for="">Northing</label>
+        </div>
+    </form>
+    <div id="view"></div>
+    <script> $(".output-box").css("display","none") </script>
+</body>
+</html>
