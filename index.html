@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projection</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.15/esri/themes/light/main.css"/> 
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://js.arcgis.com/4.15/"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script.js"></script>
@@ -15,15 +15,16 @@
     
 </head>
 <body>         
-    <form action="form">
+    <div class="form">
         <select name="select transform" id="selector">
-            <option value="stereo to wgs">stereographic to wgs84/DD</option>
-            <option value="wgs to stereo">wgs84/DD to stereographic</option>
-            <option value="stereo to utm"> stereographic to utm</option>
-            <option value="utm to stereo">utm to stereographic</option>
-            <option value="utm to wgs">utm to wgs84/DD</option>
-            <option value="wgs to utm"> wgs84/DD to utm</option>
-        </select><br>
+            <option value="stereo to wgs">Stereographic to WGS84</option>
+            <option value="wgs to stereo">WGS84 to Stereographic</option>
+            <option value="stereo to utm">Stereographic to UTM</option>
+            <option value="utm to stereo">UTM to Stereographic</option>
+            <option value="utm to wgs">UTM to WGS84</option>
+            <option value="wgs to utm">WGS84 to UTM</option>
+        </select>  
+        <i class="fa fa-question-circle fa-2x" aria-hidden="true"></i><br>
         <input type="text" value="-360000.2" class="x-input"><label for="">E</label><br>
         <input type="text" value="-920000.2" class="y-input"><label for="">N</label><br>
         <button class="btn">Convert</button><br> 
@@ -31,8 +32,25 @@
             <div class="output-x" aria-placeholder="easting"></div> <label for="">E</label><br>
             <div class="output-y" aria-placeholder="northing"></div> <label for="">N</label>
         </div>
-    </form>
+    </div>
+    <p> <br><br><br> This application transform the geoghraphic coordinates from clarck-1880 datum to the world wgs-1984 datum and
+        vise versa, using the "coordinates frame" method and the 7 parameters(for translation and rotation in 3d dimensions)
+        to achieve the best accuracy needed for geomatics and surveying works.  
+        <br>
+        <br>
+        <span>Designed by: Hussein Noureddine <br>tel:+9617122304,<br> Gmail:hussein.noureddine90@gmail.com</span>
+    </p>
     <div id="view"></div>
-    <script> $(".output-box").css("display","none") </script>
+    <script> 
+    $(".output-box").css("display","none")
+    $("i").click(function(){
+        $("p").slideToggle(500);
+        $("p").click(function(){
+            $(this).slideUp(500);
+        })
+    })
+
+    
+    </script>
 </body>
 </html>

@@ -42,7 +42,7 @@ function(esriRequest,Map, MapView,FeatureLayer,BasemapGallery,Graphic,GraphicsLa
             geometry:event,
             symbol:{
                 type: "simple-marker",
-                color: "red",
+                color: "blue",
             },
             // popupTemplate: {
             //     title: "Coordinates",
