@@ -52,22 +52,35 @@ body,html{
 margin-left: 8px;
 }
 .output-x,.output-y{
+    width: 145px;height: 2vh; overflow: hidden;
     color: red;
 }i{
-    float: right; color: red;
+    float: right; color: red; z-index: 9;
+}.output-box label{
+    float: right; margin-left: 4px;}
+
+
+.par{
+    position: absolute; width:100%; height: 100%; top: 0px;
+    z-index: 6;opacity: 0.95; display: none;
+} 
+.sub{
+    position: relative; width: 100%; height: 100%;
 }
+
 p{
-    display: none;
+   
     position: absolute;
-    width: 100%;
-    z-index: 5;
+    width: 90%;  height: 85%;
+    top: 0px; left: 0px; right: 0px; bottom: 0px;
+    margin: auto; overflow: auto;
+   
     background-color: #cccccc;
-    top: 0px;
-    height: 90%;
-    opacity: 0.95;
+    
+    
     font-size: 19px;
-    padding: 0px;
-}p span{
+    padding: 5px;
+} p span{
     position: absolute;
     bottom: 10px; font-size: 14px;color: red;
 }

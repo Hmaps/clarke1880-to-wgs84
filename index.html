@@ -33,20 +33,26 @@
             <div class="output-y" aria-placeholder="northing"></div> <label for="">N</label>
         </div>
     </div>
-    <p> <br><br><br> This application transform the geoghraphic coordinates from clarck-1880 datum to the world wgs-1984 datum and
-        vise versa, using the "coordinates frame" method and the 7 parameters(for translation and rotation in 3d dimensions)
-        to achieve the best accuracy needed for geomatics and surveying works.  
+   <div class="par">
+
+    <div class="sub">
+       <p> <br><br><br> This application transform the coordinates from clarck-1880 datum to the world wgs-1984 datum and
+        vise versa, using the "coordinates frame" method and the 7 parameters(for transition and rotation in 3d dimensions)
+        to achieve the best accuracy needed for geomatics and surveying works in Lebanon and Syria.  
         <br>
         <br>
-        <span>Designed by: Hussein Noureddine <br>tel:+9617122304,<br> Gmail:hussein.noureddine90@gmail.com</span>
-    </p>
+        <span>Designed by: Hussein Noureddine <br>tel:+96171221304,
+            <br> Gmail:hussein.noureddine90@gmail.com</span>
+        </p>
+    </div>
+    </div> 
     <div id="view"></div>
     <script> 
-    $(".output-box").css("display","none")
+    //$(".output-box").css("display","none")
     $("i").click(function(){
-        $("p").slideToggle(500);
+        $(".par").slideToggle(500);
         $("p").click(function(){
-            $(this).slideUp(500);
+            $(this).parent().slideUp(500);
         })
     })
 
